@@ -10,14 +10,16 @@ Created by Eleasha Chan
 show_instructions = input("Do you know how to play Lucky Unicorn? yes/no: "
                           ).lower()
 
-while show_instructions != "yes" and show_instructions != "no":
+
+while show_instructions != "yes" and show_instructions != "no" and \
+        show_instructions != "y" and show_instructions != "n":
     print("Please enter yes or no")
 
     show_instructions = input("Do you know how to play Lucky Unicorn? yes/no: "
                               ).lower()
 
 # If they say yes, output 'Program Continues'
-if show_instructions == "yes":
+if show_instructions == "yes" or show_instructions == "y":
     print("Program Continues")
 
 # If they say no, output 'Display instructions'
