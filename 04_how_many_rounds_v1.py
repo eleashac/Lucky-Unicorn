@@ -1,5 +1,6 @@
 """
 Lucky Unicorn - How many rounds v1
+changing 04_how_many_rounds_v3 into a function
 asks user how many rounds they want to play and checks the input is between 1
 and 10. If so, this amount becomes the balance in their account ($1 per round)
 Created by Eleasha Chan

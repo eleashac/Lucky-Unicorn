@@ -33,7 +33,26 @@ def yes_no(question_text):
 def instructions():
     print("\n***** How to play Lucky Unicorn *****\n")
     print("The rules of the game will go here\n")
-    print("Program Continues\n")
+
+
+# number checking function
+def num_check(question, low, high):
+    error = "Please enter a whole number between 1 and 10\n"
+
+    # keep asking until a valid amount (1-10) is entered
+    while True:
+        try:
+            # ask for amount
+            response = int(input(question))
+
+            # check number is within required range
+            if low <= response <= high:
+                return response
+            else:
+                print(error)
+
+        except ValueError:
+            print(error)
 
 
 # main routine
@@ -41,5 +60,9 @@ played_before = yes_no("Have you played this game before? ")
 
 if played_before == "No":
     instructions()
-else:
-    print("Program Continues")
+
+
+# ask user how much they want to play with
+user_balance = num_check("How many rounds would you like to play? "
+                         "($1 per round - must be between 1 and 10): ", 1, 10)
+print(f"You are playing with ${user_balance}")
