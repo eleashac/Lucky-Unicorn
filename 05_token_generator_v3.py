@@ -29,5 +29,6 @@ for item in range(100):
         balance -= 0.50
 
 # output
+    print(f"Token: {token}, Balance: ${balance}")
 print(f"Starting balance = ${STARTING_BALANCE:.2f}\n"
       f"Final balance = ${balance:.2f}")
