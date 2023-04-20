@@ -3,7 +3,6 @@ Lucky Unicorn - token generator v3
 format currency
 ensures odds favour the house: 10% chance of unicorn, 30% chance each for
 donkey, zebra, and horse
-Created by Eleasha Chan
 """
 
 import random

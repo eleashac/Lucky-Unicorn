@@ -1,17 +1,24 @@
 """
-Lucky Unicorn - token generator v3
-Calculate percentages to ensure the odds favour the house
-5% unicorns, 30% donkeys, and the remaining 65% horses/zebra
+Lucky Unicorn - game mechanics and looping v1
+Based on 05_token_generator_v4 but hard-wired to only allocate donkeys
+Gives user feedback about number of rounds and maintains balance
+Test amount set to $5
 """
+
 
 import random
 
-STARTING_BALANCE = 100
-balance = STARTING_BALANCE
+# Main routine
+TEST_AMOUNT = 5
+balance = TEST_AMOUNT
 
-# Testing loop to generate 10 tokens
-for item in range(10):
-    number = random.randint(1, 100)
+rounds_played = 0
+play_again = ""
+
+# Testing loop to generate 5 tokens
+while play_again != "x":
+    rounds_played += 1  # keep track of rounds
+    number = random.randint(6, 36)
 
     # adjust balance
     # if the random number is between 1 and 5 user gets a unicorn

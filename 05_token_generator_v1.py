@@ -1,7 +1,6 @@
 """
 Lucky Unicorn - token generator v1
 generates random choice of token in random order
-Created by Eleasha Chan
 """
 
 import random

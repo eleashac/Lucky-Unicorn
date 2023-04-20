@@ -1,7 +1,6 @@
 """
 Lucky Unicorn - token generator v2
 calculates user balance based on random selection of tokens
-Created by Eleasha Chan
 """
 
 import random
