@@ -1,3 +1,8 @@
+"""
+Lucky Unicorn - statement formatter v1
+Decorates text
+"""
+
 symbol = "*"
 text = "hello world"
 sides = symbol * 3
