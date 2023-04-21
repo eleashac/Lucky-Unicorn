@@ -1,6 +1,6 @@
 """
-Lucky Unicorn - game mechanics and looping v1
-Based on 05_token_generator_v4 but hard-wired to only allocate donkeys
+Lucky Unicorn - game mechanics and looping v2
+Removed hard-wiring so that all tokens can be allocated (randint 1-100)
 Gives user feedback about number of rounds and maintains balance
 Test amount set to $5
 """
@@ -18,7 +18,7 @@ play_again = ""
 # Testing loop to generate 5 tokens
 while play_again != "x":
     rounds_played += 1  # keep track of rounds
-    number = random.randint(6, 36)  # can only be a donkey
+    number = random.randint(1, 100)
 
     # adjust balance
     # if the random number is between 1 and 5 user gets a unicorn
