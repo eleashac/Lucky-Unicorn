@@ -1,7 +1,6 @@
 """
-Lucky Unicorn - based on 00_LU_base_v2
-Components added after they have been created and tested
-Adds instructions to instructions function and further text decoration
+Lucky Unicorn - based on 00_LU_base_v3
+Edited for increased user clarity and enjoyability - feedback from family
 Created by Eleasha Chan
 """
 
@@ -42,16 +41,15 @@ def instructions():
     print("Then press <enter> to play. You will win a random token: "
           "either a horse, zebra, donkey, or unicorn.")
     print()
-    print("It costs $1 to play each round, but depending on your prize you "
-          "could win all your of your money back and more! "
-          "These are the payout amounts:\n"
-          "\tUnicorn: $5 (balance increases by 4 dollars)\n"
-          "\tHorse: $0.50 (balance decreases by 50 cents)\n"
-          "\tZebra: $0.50 (balance decreases by 50 cents)\n"
-          "\tDonkey: $0.00 (balance decreases by 1 dollar")
+    print("It costs $1 to play each round. These are the payout amounts:\n"
+          "\tUnicorn: WIN $5!\n"
+          "\tHorse: WIN $0.50 \n"
+          "\tZebra: WIN $0.50 \n"
+          "\tDonkey: $0.00 ")
     print()
-    print("See if you can avoid donkeys, win unicorns, and finish with more"
-          " money than you started with\n")
+    print("You have the opportunity to end the game and cash in your rewards "
+          "anytime by entering 'X'. See if you can avoid donkeys, win unicorns,"
+          "and finish with more money than you started with! \n")
     print("*" * 50)
     print()
 
@@ -142,7 +140,7 @@ def formatter(symbol, text):
 print(formatter("=", "Welcome to the Lucky Unicorn Game"))
 print()
 
-played_before = yes_no("Have you played this game before? ")
+played_before = yes_no("Have you played this game before? y/n: ")
 
 if played_before == "No":
     instructions()
@@ -150,7 +148,7 @@ if played_before == "No":
 
 # ask user how much they want to play with
 starting_balance = num_check("How much money would you like to play with?"
-                             " 1 - 10 dollars: ", 1, 10)
+                             " 1 - 10 dollars: $", 1, 10)
 print(f"You are playing with ${starting_balance}\n")
 
 closing_balance = generate_token(starting_balance)
